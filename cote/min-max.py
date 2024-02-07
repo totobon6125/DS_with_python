@@ -14,7 +14,17 @@ T = int(input())
 for tc in range(1, T+1) :
     N = int(input())
     nums = list(map(int, input().split()))
-    print(nums)
-    ans = 0
+    # min 은 1000001 max 는 0 을 초기값으로 두고 시작
+    max_num = 0
+    min_num = 1000001
+    
+    # 이 문제의 경우 N 을 통해 nums 의 길이를 줌. 따라서 nums.length 를 안 써도 됨.
+    for i in range(N) :
+        if nums[i] > max_num :
+            max_num = nums[i]
+        if nums[i] < min_num :
+            min_num = nums[i]            
+        
+    ans = max_num - min_num
     # f string = f'문자열 입력, {변수}'
     print(f'#{tc} {ans}')
