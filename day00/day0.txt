@@ -1,0 +1,18 @@
+int     정수
+float   소수 표현
+str     문자
+bool    참 거짓
+
+참 거짓이 있음.
+0 -> False
+
+단축평가
+(A and B) 에서 A 가 False 면 B 를 판단하지 않음. 자동으로 Faluse 이므로
+(A or B) 에서 A 가 True 면 B 는 평가하지 않음. 자동ㅇ로 True 이므로
+
+def 함수명 ( 매개변수 ) :
+    함수 내용
+    return 반환 값
+
+재귀 함수
+A 함수 안에 A 함수를 다시 소환

@@ -25,15 +25,32 @@ N, M = map(int, input().split())
 # 수열을 입력 받음
 nums = list(map(int, input().split()))
 
-# 경우의 수를 세줄 변수
-answer = 0
-for i in range(N) :
-    for j in range(i,N) :
-        if M == sum(nums[i:j+1]) :
-           answer += 1
-           
-print(answer) 
-
 # 시간 복잡도는 1/2 * N^2 이지만 상수 빼니까 N^2
 
 # 5를 넘으면 볼 필요가 없음... 왜??
+
+# 투포인터 알고리즘
+l,r = 0,0
+tmp = 0
+ans = 0
+
+while True:
+    # 반복문 종료 조건
+    if tmp < M:
+        if r == N:
+            break
+        
+        else:
+            tmp += nums[r]
+            r += 1
+    
+    elif tmp > M:
+        tmp -= nums[l]
+        l += 1
+    # tmp == M
+    else:
+        ans += 1
+        tmp -= nums[l]
+        l += 1
+
+print(ans)
