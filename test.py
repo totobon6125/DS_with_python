@@ -1,6 +1,4 @@
-def namo (x, y) :
-    return x + y
-
-a = namo(3, 4)
-
-print(a)
+def recursion_func():
+   print('난 재귀')
+   recursion_func()
+recursion_func()
