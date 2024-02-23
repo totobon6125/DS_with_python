@@ -1,0 +1,5 @@
+1. 리스트 내포
+    일차원 리스트 N 번 입력받기
+    my_lst = [0 for _ in range(10)]
+
+    my_lst2 = [[0]*3 for _ in range(10)]
