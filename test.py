@@ -1,6 +1,9 @@
-my_lst = [0 for _ in range(10)]
+def recursion_func():
+    i = 0
+    print('i=>', i)
+    i = i + 1
+    if (i == 3):
+      return "재귀함수 끝"
+    recursion_func()
 
-my_lst2 = [[0]*3 for _ in range(10)]
-
-print(my_lst)
-print(my_lst2)
+recursion_func()
