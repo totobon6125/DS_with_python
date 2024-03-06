@@ -35,7 +35,7 @@ input = sys.stdin.readline
 # #1 빈 판 만들기
 # adj_martix = [[0]*(V+1) for _ in range(V+1)]
 
-# #2 입력 받기
+# #2 간선 정보 입력 받기
 # for _ in range(E):
 #    v1, v2, d = map(int, input().split()) 
 #    adj_martix[v1][v2] = 1
